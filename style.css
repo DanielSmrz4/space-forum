@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #151515;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+header {
+  background: radial-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./images/background.png");
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  animation: bg-animation view(-200px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  animation: fade-out linear;
+  animation-timeline: scroll();
+}
+
+@keyframes fade-out {
+  100% {
+    scale: 3;
+    opacity: 0;
+    transform: translateY(50px);
+  }
+}
+.item {
+  width: 300px;
+  height: 300px;
+  background-color: green;
+}/*# sourceMappingURL=style.css.map */

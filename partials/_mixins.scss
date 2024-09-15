@@ -1,3 +1,11 @@
 @mixin grid {
     max-width: 70rem;
+    margin-inline: auto;
+}
+
+@mixin split {
+    height: 20vh;
+	background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url("../images/vesmir.png");
+    background-attachment: fixed;
 }

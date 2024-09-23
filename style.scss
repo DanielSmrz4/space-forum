@@ -16,9 +16,9 @@
 // ========= //
 
 body {
-    background-color: $bg-clr;
+    background-color: $bg-clr-grey;
     color: #fff;
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.4;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }   header {
@@ -32,8 +32,10 @@ body {
         align-items: center;
     }   h1 {
             width: 225px;
-            border-left: 1px solid #fff;
+            border-left: 2px solid #fff;
             padding-left: 1rem;
+            text-shadow: 1px 1px 20px lightskyblue;
+            letter-spacing: 4px;
             animation: fade-out linear;
             animation-timeline: scroll();
         }
@@ -44,22 +46,28 @@ body {
         
     }   .summer-triangel {
             @include grid;
-            padding: 1rem;
+            background: $bg-clr-grey-blue;
+            padding-block-start: 4rem;
+            margin-block-end: -6px;
         }   h2 {
-                text-align: center;
+                width: fit-content;
+                margin-inline: auto;
+                padding: .5rem 1rem;
                 font-weight: 400;
+                border-left: 2px solid lightskyblue;
             }
             p {
-                margin-block: 1rem;
+                margin-block: 4rem 2rem;
+                padding-inline: 1em;
             }
             .summer-triangel-img {
                 max-width: 800px;
                 margin-inline: auto;
+                
             }   img {
                     width: 100%;
-                    border-radius: 1rem;
-                    box-shadow: 0 0 16px -15px;
+                    box-shadow: 0 0 16px -10px #000;
                 }
     .split {
         @include split;
-    }   
+    }

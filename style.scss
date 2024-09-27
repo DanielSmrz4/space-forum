@@ -16,15 +16,14 @@
 // ========= //
 
 body {
-    background-color: $bg-clr-grey;
+    background: radial-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)), url("./images/vesmir.png");
+    background-size: cover;
+    background-attachment: fixed;
     color: #fff;
     font-size: 1.1rem;
     line-height: 1.4;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }   header {
-        background: radial-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)), url("./images/vesmir.png");
-        background-size: cover;
-        background-attachment: fixed;
         min-height: 100vh;
         animation: bg-animation view(-200px);
         display: flex;
@@ -40,33 +39,42 @@ body {
             animation-timeline: scroll();
         }
         @keyframes fade-out {
-            100% { scale: 3; opacity: 0; transform: translateY(50px);}
+            100% { scale: 3; opacity: 0; }  
         }
     main {       
         
     }   .summer-triangel {
             @include grid;
-            background: $bg-clr-grey-blue;
-            padding-block-start: 4rem;
-            margin-block-end: -6px;
+            // background: $bg-clr-grey-blue;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            background-color: rgba(255, 255, 255, 0.136);
+            backdrop-filter: blur(5px);
+            border-radius: 2rem;
+            overflow: hidden;
+            box-shadow: 0 0 16px -10px #000;
+            padding: 0 1rem 1rem 1rem;
         }   h2 {
                 width: fit-content;
                 margin-inline: auto;
                 padding: .5rem 1rem;
                 font-weight: 400;
                 border-left: 2px solid lightskyblue;
+                margin-block: clamp(2rem, .5rem + 5vw, 3rem);
             }
             p {
-                margin-block: 4rem 2rem;
-                padding-inline: 1em;
+                max-width: 600px;
+                margin-inline: auto;
             }
             .summer-triangel-img {
-                max-width: 800px;
+                max-width: 600px;
                 margin-inline: auto;
                 
             }   img {
                     width: 100%;
-                    box-shadow: 0 0 16px -10px #000;
+                    border-radius: 1rem
+                    // box-shadow: 0 0 16px -10px #000;
                 }
     .split {
         @include split;
